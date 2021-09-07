@@ -24,13 +24,13 @@ describe(LikeWidgetComponent.name, () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should auto generate ID when id input property is missing', () => {
+  it('Should auto-generate ID during ngOnInit when (@Input id) is not assigned', () => {
     // Detecta os ciclos de vida do componente (OnInit, OnChanges, OnDestroy...).
     fixture.detectChanges();
     expect(component.id).toBeTruthy();
   });
 
-  it('Should NOT generate ID when id input property is present', () => {
+  it('Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned', () => {
     const someId = 'someId';
     component.id = someId;
     fixture.detectChanges();
@@ -38,16 +38,12 @@ describe(LikeWidgetComponent.name, () => {
   });
 
   it(`#${LikeWidgetComponent.prototype.like.name}
-    should trigger emission when called`, (done) => {
+    should trigger (@Output liked) when called`, () => {
+    // Fica "espiando" um método de um Emitter
+    spyOn(component.liked, 'emit');
     fixture.detectChanges();
-
-    // EventEmitter é um Observable, e a cada chamada irá verificar se houve uma emissão.
-    component.liked.subscribe(() => {
-      expect(true).toBeTrue();
-      // O teste será dado como concluído quando done for chamado.
-      done();
-    });
-
     component.like();
+    // O método toHaveBeenCalled() espera que haja um spyOn() declarado.
+    expect(component.liked.emit).toHaveBeenCalled();
   });
 });
