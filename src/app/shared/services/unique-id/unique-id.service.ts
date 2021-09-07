@@ -6,8 +6,7 @@ export class UniqueIdService {
   private numberOfGeneratedIds = 0;
 
   // RegExp para testar se começa com letra maiúscula ou minúscula
-  // e se é seguido de hífen e permite letras e números após este hífen.
-  private validId = /^[A-Za-z]+[\W\-\:\.]*$/;
+  private validId = /^[A-Za-z]/;
 
   constructor() {}
 
