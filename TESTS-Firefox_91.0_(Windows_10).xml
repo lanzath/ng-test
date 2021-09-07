@@ -1,16 +1,23 @@
 <?xml version="1.0"?>
-<testsuite name="Firefox 91.0 (Windows 10)" package="" timestamp="2021-09-07T14:22:05" id="0" hostname="nitro-5-laptop" tests="8" errors="0" failures="0" time="0.096">
+<testsuite name="Firefox 91.0 (Windows 10)" package="" timestamp="2021-09-07T18:45:37" id="0" hostname="nitro-5-laptop" tests="15" errors="0" failures="0" time="0.2">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0"/>
   </properties>
-  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.063" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
-  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.011" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
-  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.009" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
-  <testcase name="LikeWidgetComponent Should create component" time="0.009" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.081" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should create component" time="0.01" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.013" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.013" classname="Firefox_91_0_(Windows_10).LikeWidgetComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should have aria-label with 0 (@Input likes)" time="0.013" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should update aria-label when (@Input likes) is incremented" time="0.015" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent Should create component" time="0.009" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;    should trigger (@Output liked) once when called&#xA;    multiple times within debounce time" time="0.011" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;    should trigger (@Output liked) two times when&#xA;    called outside debounce time" time="0.008" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display image with src and description when bound to properties" time="0.01" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display number of likes when (@Input likes) is incremented" time="0.011" classname="Firefox_91_0_(Windows_10).PhotoFrameComponent"/>
+  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.003" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
   <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times." time="0.002" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
-  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
-  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0.001" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
-  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;  should return the number of generated ids when called" time="0.001" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;  should return the number of generated ids when called" time="0" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
+  <testcase name="UniqueIdService #generatedUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0.001" classname="Firefox_91_0_(Windows_10).UniqueIdService"/>
   <system-out>
     <![CDATA[
 ]]>
